@@ -59,7 +59,7 @@ async function sendMail(a) {
 
 
     if (a.id) {
-      console.log(`http://localhost:7000/users/checkmail/${a.id}/${a.email}`)
+      console.log(`https://pizzabytes.herokuapp.com/users/checkmail/${a.id}/${a.email}`)
       const opt = {
         from: "workatalltimemail@gmail.com",
         to: a.email,
@@ -67,7 +67,7 @@ async function sendMail(a) {
         text: "you can clik the link for resetting you password",
 
 
-        html: `<a href="http://localhost:7000/users/checkmail/${a.id}/${a.email}""> reset password </a>`
+        html: `<a href="https://pizzabytes.herokuapp.com/users/checkmail/${a.id}/${a.email}""> reset password </a>`
       }
 
       const result1 = await transport.sendMail(opt)
