@@ -279,7 +279,7 @@ router.get("/checkmail/:splid/:emailid", async (req, res) => {
     await mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
     let user = await userdata.findOne({ email: { $eq: req.params.emailid } })
     if (user.resetid == req.params.splid) {
-      res.redirect("http://localhost:3000/resetpassword")
+      res.redirect("https://pizzabytes.netlify.app/resetpassword")
 
 
     }
